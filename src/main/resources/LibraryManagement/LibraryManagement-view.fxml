@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LibraryManagement.LibraryManagementController">
+   <children>
+      <Text layoutX="59.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Library Management System" wrappingWidth="381.22900390625">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="107.0" fitWidth="247.0" layoutX="131.0" layoutY="48.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@compsci.png" />
+         </image>
+      </ImageView>
+      <VBox layoutX="167.0" layoutY="155.0" prefHeight="232.0" prefWidth="168.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#onBtnSearch" prefHeight="69.0" prefWidth="168.0" text="Search For Book" />
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onBtnEnter" prefHeight="69.0" prefWidth="168.0" text="Enter Book">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button layoutX="10.0" layoutY="89.0" mnemonicParsing="false" onAction="#onBtnRecommendations" prefHeight="69.0" prefWidth="168.0" text="Book Recommendations">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
