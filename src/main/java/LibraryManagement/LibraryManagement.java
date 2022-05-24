@@ -27,10 +27,20 @@ public class LibraryManagement {
 
     public boolean searchBook(String text) {
         for (int i = 0; i < book.length; i++) {
-            if (text.equals(book[i].getBookName()) && book[i] != null) {
+            if (text.equalsIgnoreCase(book[i].getBookName()) && book[i] != null) {
                 return true;
             }
         }
         return false;
     }
+
+    public String isFree() {
+        double random = Math.random();
+        if (random >= 0.5) {
+            return "Book is available to check out in library.";
+        } else {
+            return "Book is not available to checkout in library.";
+        }
+    }
+
 }

@@ -101,10 +101,11 @@ public class LibraryManagementController {
 
     //Methods for storing book info in array for SearchBook and EnterBook screens
     public void onBtnSearchBook() {
-        if (lm.searchBook(bookNameSearch.getText())) {
+        if (lm.searchBook(bookNameSearch.getText()) && bookNameSearch.getText() != null) {
             txtAreaSearch.setText(
                     "Book found!\n" +
-                    LibraryManagement.book[lm.index].toString());
+                    LibraryManagement.book[lm.index].toString()
+                    + "\n" + lm.isFree());
         } else {
             txtAreaSearch.setText("Book not found. Try again.");
         }
@@ -118,7 +119,7 @@ public class LibraryManagementController {
         b.setPublisherName(publisherNameEnter.getText());
         lm.addBook(b);
         //lm.index += 1;
-        txtAreaEnter.setText("Book added!\n" + b.toString());
+        txtAreaEnter.setText("Book added!\n" + b);
     }
 
     //radio group code
